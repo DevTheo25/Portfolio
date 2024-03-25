@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-from flask_mail import Mail, Message
-from config import email,senha
+
 
 app = Flask(__name__)
 
