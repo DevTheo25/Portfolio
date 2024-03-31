@@ -26,6 +26,19 @@ navItem.forEach(item => {
 });
 
 
+// Adicione um ouvinte de evento de clique a todos os links do menu
+const menuLinks = document.querySelectorAll('.nav-menu a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        menuLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        this.classList.add('active');
+    });
+});
+
+
+
 // Animar todos os itens na tela que tiverem meu atributo data-anime
 
 const item = document.querySelectorAll("[data-anime]");
@@ -47,3 +60,6 @@ animeScroll();
 window.addEventListener("scroll", ()=>{
   animeScroll();
 })
+
+
+
